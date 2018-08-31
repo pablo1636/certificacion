@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30/08/2018 16:01:08 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Pedidos" table="pedidos" catalog="deliver_fast" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="idUsuario" type="int">
+            <column name="id_usuario" not-null="true" />
+        </property>
+        <property name="calleOrigen" type="string">
+            <column name="calle_origen" length="60" not-null="true" />
+        </property>
+        <property name="nroOrigen" type="string">
+            <column name="nro_origen" length="10" not-null="true" />
+        </property>
+        <property name="pisoOrigen" type="string">
+            <column name="piso_origen" length="5" />
+        </property>
+        <property name="deptoOrigen" type="string">
+            <column name="depto_origen" length="5" />
+        </property>
+        <property name="calleDestino" type="string">
+            <column name="calle_destino" length="60" not-null="true" />
+        </property>
+        <property name="nroDestino" type="string">
+            <column name="nro_destino" length="10" not-null="true" />
+        </property>
+        <property name="pisoDestino" type="string">
+            <column name="piso_destino" length="5" />
+        </property>
+        <property name="deptoDestino" type="string">
+            <column name="depto_destino" length="5" />
+        </property>
+        <property name="detalle" type="string">
+            <column name="detalle" length="60" not-null="true" />
+        </property>
+        <property name="totalEstimado" type="double">
+            <column name="total_estimado" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="totalComision" type="double">
+            <column name="total_comision" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="formaPago" type="string">
+            <column name="forma_pago" length="30" not-null="true" />
+        </property>
+        <property name="pagaCon" type="double">
+            <column name="paga_con" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="vuelto" type="double">
+            <column name="vuelto" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="idavuelta" type="int">
+            <column name="idavuelta" not-null="true" />
+        </property>
+        <property name="ciudad" type="string">
+            <column name="ciudad" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
